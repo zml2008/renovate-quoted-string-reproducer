@@ -21,3 +21,8 @@ jobs:
         with:
           distribution: "temurin"
           java-version: "11"
+      - name: "comment, no quotes"
+        uses: actions/github-script@v6 # comment after
+        with:
+          script: |
+            return {}
