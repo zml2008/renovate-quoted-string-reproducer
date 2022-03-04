@@ -16,7 +16,12 @@ jobs:
     steps:
       - name: "checkout repository"
         uses: "actions/checkout@v2" # comment after
-      - name: "setup java 11"
+      - name: "quoted, no comment, outdated"
+        uses: "actions/setup-java@v2"
+        with:
+          distribution: "temurin"
+          java-version: "11"
+      - name: "quoted, no comment, up to date"
         uses: "actions/setup-java@v3"
         with:
           distribution: "temurin"
